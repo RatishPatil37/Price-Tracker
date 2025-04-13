@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Amazon Review Sentiment Analyzer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Optional: Add specific styles for the about page here if needed */
+        .about-content {
+            padding: 40px 0;
+        }
+        .about-content .card {
+            margin-bottom: 30px;
+        }
+        .about-content h2 {
+            color: var(--amazon-dark);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--amazon-orange);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .tech-stack ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .tech-stack li {
+            background-color: #e9ecef;
+            color: var(--text-dark);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .tech-stack i {
+            margin-right: 8px;
+            color: var(--amazon-blue);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/"><i class="fab fa-amazon"></i> Review Analyzer</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/about" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container about-content">
+        <div class="card">
+            <h2>About This Project</h2>
+            <p>
+                The Amazon Review Sentiment Analyzer is a web application designed to help users quickly understand customer opinions about products sold on Amazon.
+                By simply pasting the URL of an Amazon product page, the tool fetches recent reviews and performs sentiment analysis using Natural Language Processing (NLP).
+            </p>
+            <p>
+                The goal is to provide a summarized view of customer feedback, highlighting the overall sentiment (positive, neutral, negative) and identifying key topics or phrases mentioned in the reviews.
+                This can be valuable for potential buyers researching a product or for sellers monitoring feedback on their items.
+            </p>
+        </div>
+
+        <div class="card tech-stack">
+            <h2>Technology Stack</h2>
+            <p>This application leverages several technologies:</p>
+            <ul>
+                <li><i class="fab fa-python"></i> Python (Flask Framework)</li>
+                <li><i class="fas fa-cogs"></i> Apify (For Review Scraping)</li>
+                <li><i class="fas fa-language"></i> TextBlob (For Sentiment Analysis)</li>
+                <li><i class="fab fa-html5"></i> HTML5</li>
+                <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                <li><i class="fab fa-js"></i> JavaScript (For Frontend Interactivity)</li>
+            </ul>
+             <p style="margin-top: 20px;">
+                Review data is sourced directly from Amazon product pages via the Apify platform to ensure authenticity and relevance.
+            </p>
+       </div>
+
+        <div class="card">
+             <h2>How it Works</h2>
+             <ol>
+                <li>User enters an Amazon product URL.</li>
+                <li>The backend (Flask app) receives the URL.</li>
+                <li>The Apify service is called to scrape reviews for that product URL.</li>
+                <li>Fetched reviews are cleaned and processed.</li>
+                <li>TextBlob analyzes each review for sentiment polarity and subjectivity.</li>
+                <li>Key phrases (noun phrases) are extracted from each review.</li>
+                <li>Aggregate statistics (percentage of positive/neutral/negative reviews) are calculated.</li>
+                <li>The results, including stats and individual review details, are sent back to the frontend.</li>
+                <li>JavaScript displays the sentiment chart, statistics, and review cards dynamically.</li>
+             </ol>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fab fa-amazon"></i> Review Sentiment Analyzer
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Powered by Apify and TextBlob | &copy; 2025 Amazon Review Sentiment Analysis</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                // Optional: Add animation logic for links fading in if you implement it in CSS
+                burger.classList.toggle('toggle');
+            });
+        });
+    </script>
+</body>
+</html>
