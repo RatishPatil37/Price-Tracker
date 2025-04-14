@@ -1,3 +1,0 @@
-flask
-apify-client
-textblob
