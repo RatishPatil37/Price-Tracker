@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Amazon Review Sentiment Analyzer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="/">
+            <span class="logo-icon">
+              <i class="fas fa-chart-line"></i>
+              <i class="fas fa-comment-dots"></i>
+            </span>
+            <span class="logo-text">SentiWise</span>
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="/about"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+          <li>
+            <a href="/contact" class="active"
+              ><i class="fas fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? We're here to help!</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="container">
+      <section class="contact-section">
+        <div class="card contact-card">
+          <h1>Get in Touch</h1>
+          <p class="subtitle">
+            We'd love to hear from you! Fill out the form below to reach us.
+          </p>
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email"
+                ><i class="fas fa-envelope"></i> Your Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message"
+                ><i class="fas fa-comment-alt"></i> Your Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+          <div class="contact-options">
+            <div class="contact-option">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:patilratish369@gmail.com" target="_blank" rel="noopener noreferrer"
+                >support@amazonreviewanalyzer.com</a
+              >
+            </div>
+            <div class="contact-option">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/RatishPatil37/Price-Tracker"
+                target="_blank" rel="noopener noreferrer"
+                >GitHub Repository</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <i class="fab fa-amazon"></i> Review Sentiment Analyzer
+          </div>
+          <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer title="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/ratish-patil-2a4910282/"  target="_blank" rel="noopener noreferrertitle="Connect on LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/RatishPatil37/Price-Tracker"  target="_blank" rel="noopener noreferrertitle="GitHub Repository"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            Powered by Apify and TextBlob | &copy; 2025 Amazon Review Sentiment
+            Analysis
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
